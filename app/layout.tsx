@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DANI_Dental_Clinic",
-  description: "Modern dental clinic website built with Next.js and Tailwind CSS.",
+  title: "FJD Trion India",
+  description: "Modern trion website built with Next.js and Tailwind CSS.",
 };
 
 export default function RootLayout({
