@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { PageShell } from "@/pages/hero";
+import  PageShell  from "@/pages/hero";
 import { findIndustry, industries } from "@/lib/catalog";
 import { Metadata } from "next";
 

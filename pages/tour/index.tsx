@@ -13,7 +13,7 @@ const events = [
   { name: "INTERGEO 2026", date: "Sep 15-17", city: "Munich, DE" },
 ];
 
-export function Tour() {
+export default function Tour() {
   return (
     <section className="relative py-32 px-6">
       <div className="mx-auto max-w-7xl">

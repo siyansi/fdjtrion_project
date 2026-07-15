@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
-import { PageShell } from "@/pages/hero";
+import PageShell from "@/pages/hero";
 import { productCategories, type Item } from "@/lib/catalog";
 
 interface Props {

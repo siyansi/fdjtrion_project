@@ -3,7 +3,7 @@
 import { useState } from "react";
 import * as motion from "framer-motion/client"; // Next.js 15+ friendly client wrapper
 import { Search } from "lucide-react";
-import { PageShell } from "@/pages/hero"; 
+import  PageShell  from "@/pages/hero"; 
 
 const tabs = ["All", "Product Updates", "Customer Stories", "News & Insights"] as const;
 

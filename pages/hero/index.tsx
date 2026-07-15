@@ -1,7 +1,7 @@
 "use client";
+
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-
 
 type Props = {
   eyebrow?: string;
@@ -10,7 +10,8 @@ type Props = {
   children: ReactNode;
 };
 
-export function PageShell({ eyebrow, title, subtitle, children }: Props) {
+// Changed from 'export function PageShell' to 'export default function PageShell'
+export default function PageShell({ eyebrow, title, subtitle, children }: Props) {
   return (
     <div className="relative bg-background text-foreground overflow-hidden">
       {/* <div className="pointer-events-none fixed inset-0 -z-10">

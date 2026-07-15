@@ -1,22 +1,7 @@
 "use client";
 
-
-
-import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { PageShell } from "@/pages/hero";
-
-export const Route = createFileRoute()({
-  head: () => ({
-    meta: [
-      { title: "Industries — FJD Trion India" },
-      { name: "description", content: "Reality-capture solutions for surveying, construction, mining, forestry, BIM, forensics and utilities across India." },
-      { property: "og:title", content: "Industries — FJD Trion India" },
-      { property: "og:description", content: "Purpose-built LiDAR & GNSS solutions across India's toughest industries." },
-    ],
-  }),
-  component: IndustriesPage,
-});
+import  PageShell  from "@/pages/hero";
 
 const industries = [
   { name: "Turf Management", tag: "Sports & Golf", hue: "from-emerald-500/40 to-emerald-900/40" },
@@ -33,7 +18,8 @@ const industries = [
   { name: "Urban Planning", tag: "Smart City", hue: "from-cyan-500/40 to-sky-900/40" },
 ];
 
-function IndustriesPage() {
+// Added 'export default' so Next.js knows this is the primary component for the route
+export default function IndustriesPage() {
   return (
     <PageShell
       eyebrow="Where we work"

@@ -98,7 +98,7 @@ function Reveal({
 // }
 
 export function HeroIntro() {
-  return (
+      return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-transparent pt-28">
       <div
         className="pointer-events-none absolute inset-0 opacity-60"
@@ -685,8 +685,7 @@ function Footer() {
     </footer>
   );
 }
-
-function Index() {
+export default function Index() {
   return (
     <div className="min-h-screen bg-[oklch(0.10_0.025_240)] text-white antialiased">
       {/* <Nav /> */}

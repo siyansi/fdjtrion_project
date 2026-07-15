@@ -4,7 +4,7 @@
 import { useState } from "react";
 import * as motion from "framer-motion/client"; // Next.js 15+ compatible client wrapper
 import { BookOpen, Download, LifeBuoy, MessageSquare, Play, Wrench, ChevronDown } from "lucide-react";
-import { PageShell } from "@/pages/hero";
+import  PageShell  from "@/pages/hero";
 
 const cards = [
   { icon: BookOpen, title: "Documentation", desc: "User manuals, quick-starts and datasheets for every product." },

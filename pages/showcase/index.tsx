@@ -1,13 +1,12 @@
 "use client";
 
-
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import pointcloud from "@/assets/pointcloud.jpg";
 import p2Vision from "@/assets/product-p2-vision.png";
 
-export function Showcase() {
+// Changed to 'export default function' to satisfy the Next.js router constraint
+export default function Showcase() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,

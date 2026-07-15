@@ -1,6 +1,5 @@
 "use client";
 
-
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import p2Vision from "@/assets/product-p2-vision.png";
@@ -17,7 +16,8 @@ const products = [
   { name: "V10L GNSS System", tag: "Pinpoint Accuracy", img: v10l },
 ];
 
-export function ProductGrid() {
+// Changed to 'export default function' to satisfy the Next.js router constraint
+export default function ProductGrid() {
   return (
     <section className="relative py-32 px-6">
       <div className="mx-auto max-w-7xl">

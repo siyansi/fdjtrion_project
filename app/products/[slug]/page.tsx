@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
-import { PageShell } from "@/pages/hero";
+import  PageShell  from "@/pages/hero";
 import { findProduct, productCategories } from "@/lib/catalog";
 import { ArrowRight } from "lucide-react";
 

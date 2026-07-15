@@ -3,7 +3,7 @@
 import { useState } from "react";
 import * as motion from "framer-motion/client"; // Next.js 15+ compatible client wrapper
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
-import { PageShell } from "@/pages/hero";
+import  PageShell  from "@/pages/hero";
 
 const offices = [
   { city: "Bengaluru", addr: "Level 4, Prestige Tech Park, Sarjapur Rd, Bengaluru 560103", phone: "+91 80 4000 1234" },

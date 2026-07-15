@@ -1,27 +1,12 @@
 "use client";
 
-
-
-import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { PageShell } from "@/pages/hero";
+import  PageShell  from "@/pages/hero";
 import p2Vision from "@/assets/product-p2-vision.png";
 import v4e from "@/assets/product-v4e-lidar.png";
 import p2Lidar from "@/assets/product-p2-lidar.png";
 import v10l from "@/assets/product-v10l-gnss.png";
-
-export const Route = createFileRoute()({
-  head: () => ({
-    meta: [
-      { title: "Products — FJD Trion India | LiDAR, GNSS & Guidance" },
-      { name: "description", content: "Explore FJD Trion India's full lineup: LiDAR scanners, GNSS receivers, digital construction and urban mapping systems." },
-      { property: "og:title", content: "Products — FJD Trion India" },
-      { property: "og:description", content: "LiDAR, GNSS, guidance and software for reality capture in India." },
-    ],
-  }),
-  component: ProductsPage,
-});
 
 const categories = [
   {
@@ -57,7 +42,8 @@ const categories = [
   },
 ];
 
-function ProductsPage() {
+// Changed to 'export default function' so Next.js satisfies its route config check
+export default function ProductsPage() {
   return (
     <PageShell
       eyebrow="The Lineup"
@@ -86,6 +72,7 @@ function ProductsPage() {
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[image:var(--gradient-brand)] mix-blend-overlay" />
                   <div className="relative flex h-56 items-center justify-center">
                     <div className="absolute h-40 w-40 rounded-full bg-brand/20 blur-3xl group-hover:bg-brand/40 transition" />
+                    {/* Fixed src mapping to utilize Next.js static asset structure cleanly */}
                     <img src={it.img.src} alt={it.title} className="relative h-52 object-contain drop-shadow-2xl group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="relative mt-6 flex items-start justify-between gap-4">
