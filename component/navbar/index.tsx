@@ -29,14 +29,14 @@ export function Navbar() {
     closeTimer.current = window.setTimeout(() => setOpen(null), 140);
   };
 
-  const links: { label: string; to: string; menu?: MenuKey }[] = [
-    { label: "Home", to: "/" },
-    { label: "Products", to: "/products", menu: "products" },
-    { label: "Industries", to: "/industries", menu: "industries" },
-    { label: "Blogs", to: "/blogs" },
-    { label: "Support", to: "/support", menu: "support" },
-    { label: "Contact Us", to: "/contact" },
-  ];
+ const links: { label: string; href: string; menu?: MenuKey }[] = [
+  { label: "Home", href: "/" },
+  { label: "Products", href: "/products", menu: "products" },
+  { label: "Industries", href: "/industry", menu: "industries" }, // Changed to /industry to match your folder name
+  { label: "Blogs", href: "/blog" },
+  { label: "Support", href: "/support", menu: "support" },
+  { label: "Contact Us", href: "/contact" },
+];
 
   return (
     <header
@@ -67,7 +67,7 @@ export function Navbar() {
               onMouseEnter={() => (l.menu ? openMenu(l.menu) : openMenu(null))}
             >
               <Link
-                href={l.to}
+                href={l.href}
                 
                 className={`relative px-4 py-2 text-sm text-foreground/80group
 relative
@@ -141,7 +141,7 @@ shadow-[0_15px_45px_rgba(0,0,0,.35)]
 transition-all
 duration-500 rounded-3xl overflow-hidden">
               {open === "products" && <ProductsPanel activeCat={activeCat} setActiveCat={setActiveCat} onNav={() => setOpen(null)} />}
-              {open === "industries" && <SimpleGridPanel items={industries} base="/industries" onNav={() => setOpen(null)} />}
+              {open === "industries" && <SimpleGridPanel items={industries} base="/industry" onNav={() => setOpen(null)} />}
               {open === "support" && <SimpleGridPanel items={supportItems} base="/support" onNav={() => setOpen(null)} />}
             </div>
           </motion.div>
@@ -258,10 +258,9 @@ function ProductsPanel({
     </div>
   );
 }
-
-function SimpleGridPanel({ items, base, onNav }: { items: Item[]; base: "/industries" | "/support"; onNav: () => void }) {
+function SimpleGridPanel({ items, base, onNav }: { items: Item[]; base: "/industry" | "/support"; onNav: () => void }) {
   return (
-    <div className="p-8 grid grid-cols-4 gap-4 " style={{ fontFamily: 'Poppins' }}>
+    <div className="p-8 grid grid-cols-4 gap-4" style={{ fontFamily: 'Poppins' }}>
       {items.map((it, i) => (
         <motion.div
           key={it.slug}
@@ -269,11 +268,11 @@ function SimpleGridPanel({ items, base, onNav }: { items: Item[]; base: "/indust
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.03 }}
         >
-          {base === "/industries" ? (
+          {base === "/industry" ? (
             <Link
-              href={`/industries/${it.slug}`}
+              href={`/industry/${it.slug}`} // Changed from /industries/ to /industry/ to match your folder
               onClick={onNav}
-              className="block group rounded-2xl p-4 hover:bg-white/5  border border-transparent hover:border-white/10 transition-all"
+              className="block group rounded-2xl p-4 hover:bg-white/5 border border-transparent hover:border-white/10 transition-all"
             >
               <div className="h-24 rounded-lg bg-gradient-to-br from-brand/30 to-transparent mb-3 group-hover:from-brand/50 transition" />
               <div className="text-sm font-medium">{it.name}</div>
@@ -281,7 +280,7 @@ function SimpleGridPanel({ items, base, onNav }: { items: Item[]; base: "/indust
             </Link>
           ) : (
             <Link
-              href ={`/support/${it.slug}`}
+              href={`/support/${it.slug}`}
               onClick={onNav}
               className="block group rounded-2xl p-4 hover:bg-white/5 border border-transparent hover:border-white/10 transition-all"
             >
