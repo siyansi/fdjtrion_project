@@ -2,7 +2,7 @@
 
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import scannerHero from "@/assets/scanner-hero.jpg";
+import scannerHero from "@/assets/P2 LiDAR.png";
 import graffitiHd from "@/assets/graffiti-hd.jpg";
 import graffitiLo from "@/assets/graffiti-lo.jpg";
 import pointcloudCastle from "@/assets/pointcloud-castle.jpg";
@@ -79,7 +79,7 @@ function Reveal({
 //     >
 //       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4">
 //         <a href="#" className="text-sm font-semibold tracking-tight">
-//           FJD Trion P2 LiDAR Scanner
+//           JAS geomatics  P2 LiDAR Scanner
 //         </a>
 //         <nav className="hidden gap-8 text-sm md:flex">
 //           {["Specs", "Download Center", "Free Quote", "Store"].map((l) => (
@@ -111,7 +111,7 @@ export function HeroIntro() {
         <Reveal>
           <img
             src={scannerHero.src}
-            alt="FJD Trion P2 LiDAR Scanner"
+            alt="JAS geomatics  P2 LiDAR Scanner"
             className="mx-auto max-h-[75vh] w-auto drop-shadow-[0_30px_60px_rgba(0,210,255,0.35)] transition-transform duration-[1200ms] hover:scale-[1.03]"
           />
         </Reveal>
@@ -124,7 +124,7 @@ export function HeroIntro() {
             </span>
           </h1>
           <p className="mt-8 max-w-xl text-base leading-relaxed text-neutral-300 md:text-lg">
-            Weighing just 700g, the FJD Trion P2 LiDAR Scanner delivers
+            Weighing just 700g, the JAS geomatics  P2 LiDAR Scanner delivers
             centimeter-level precision, real-time colorized point clouds, and
             multi-format outputs. Its field-ready design lets professionals
             capture complex landscapes and intricate details with ease.
@@ -165,7 +165,7 @@ export function VideoSlamSection() {
                 Field Demo
               </p>
               <p className="mt-1 text-lg font-medium">
-                FJD Trion P2 redefines scanning possibilities
+                JAS geomatics  P2 redefines scanning possibilities
               </p>
             </div>
           </div>
@@ -224,7 +224,7 @@ export function HyperDense() {
               HyperDense+
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-neutral-400">
-              With the HyperDense+ feature in the FJD Trion Model, it delivers
+              With the HyperDense+ feature in the JAS geomatics  Model, it delivers
               5–7× denser clouds, giving you better colorization and overall
               quality.
             </p>
@@ -502,34 +502,34 @@ export function Ecosystem() {
               Designed to Work Together
             </h2>
             <p className="mt-4 text-neutral-400">
-              Capture, process, and deliver your 3D data within one connected FJD Trion workflow.
+              Capture, process, and deliver your 3D data within one connected JAS geomatics  workflow.
             </p>
           </div>
         </Reveal>
         <EcosystemCard
           eyebrow="Data Collection"
-          title="FJD Trion Scan"
+          title="JAS geomatics  Scan"
           desc="App based real time control and scan file management."
           img={appPhone.src}
           reverse
         />
         <EcosystemCard
           eyebrow="Data Processing"
-          title="FJD Trion Model"
+          title="JAS geomatics  Model"
           desc="Generate reports for construction, forestry, mining, and more."
           img={laptopSoftware.src}
           cta="download"
         />
         <EcosystemCard
           eyebrow="Generate Deliverables"
-          title="FJD Trion Model for Tablets"
+          title="JAS geomatics  Model for Tablets"
           desc="On site post processing and preview with iPad and Android support."
           img={tabletApp.src}
           reverse
         />
         <EcosystemCard
           eyebrow="Cloud Collaboration"
-          title="FJD Trion Model Web"
+          title="JAS geomatics  Model Web"
           desc="Share data online and collaborate with your team using different tools."
           img={laptopSoftware.src}
         />
@@ -543,7 +543,7 @@ export function SpecsHero() {
     <section id="specs" className="relative bg-transparent py-24">
       <Reveal>
         <h2 className="text-center text-3xl font-bold text-white md:text-5xl">
-          FJD Trion P2 Specifications
+          JAS geomatics  P2 Specifications
         </h2>
       </Reveal>
       <div className="mt-16 flex flex-wrap items-end justify-center gap-4 px-6">
@@ -678,13 +678,13 @@ export function SpecAccordion() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-white/10 bg-transparent py-10 text-center text-sm text-neutral-500">
-      © 2026 FJD Trion. All rights reserved.
-    </footer>
-  );
-}
+// function Footer() {
+//   return (
+//     <footer className="border-t border-white/10 bg-transparent py-10 text-center text-sm text-neutral-500">
+//       © 2026 JAS geomatics  India. All rights reserved.
+//     </footer>
+//   );
+// }
 export default function Index() {
   return (
     <div className="min-h-screen bg-[oklch(0.10_0.025_240)] text-white antialiased">
@@ -699,7 +699,7 @@ export default function Index() {
         <SpecsHero />
         <SpecAccordion />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

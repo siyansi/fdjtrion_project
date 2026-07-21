@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = findProduct(slug);
 
   return {
-    title: `${p?.name ?? "Product"} — FJD Trion India`,
-    description: p?.tagline ?? "FJD Trion product",
+    title: `${p?.name ?? "Product"} — JAS geomatics  India`,
+    description: p?.tagline ?? "JAS geomatics  product",
   };
 }
 

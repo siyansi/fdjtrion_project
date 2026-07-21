@@ -2,17 +2,20 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import p2Vision from "@/assets/product-p2-vision.png";
-import v4e from "@/assets/product-v4e-lidar.png";
-import p2Lidar from "@/assets/product-p2-lidar.png";
-import v10l from "@/assets/product-v10l-gnss.png";
+import p2Vision from "@/assets/P2 LiDAR Thermal.png";
+import v4e from "@/assets/V4E Lidar & V4e Mini.png";
+import p2Lidar from "@/assets/P2 LiDAR.png";
+import s2Lidar from "@/assets/S2 Max LiDAR with INsta X5 Camera.png";
+import v10l from "@/assets/V10l with controller 1.png";
+import v4Lidar from "@/assets/V4E LiDAR.png";
+
 
 const products = [
   { name: "P2 Vision+", tag: "3D Thermal Insight", img: p2Vision },
   { name: "V4e LiDAR", tag: "Entry-level 3D Scanning", img: v4e },
   { name: "P2 LiDAR Scanner", tag: "Handheld Precision", img: p2Lidar },
-  { name: "S2 Series LiDAR", tag: "Larger Capability", img: p2Lidar },
-  { name: "V4e Pro", tag: "Mini RTK Receiver", img: v10l },
+  { name: "S2 Series LiDAR", tag: "Larger Capability", img: s2Lidar },
+  { name: "V4e Pro", tag: "Mini RTK Receiver", img: v4Lidar },
   { name: "V10L GNSS System", tag: "Pinpoint Accuracy", img: v10l },
 ];
 

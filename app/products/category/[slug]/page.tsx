@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = productCategories.find((x) => x.slug === slug);
 
   return {
-    title: `${c?.name ?? "Category"} — FJD Trion India`,
+    title: `${c?.name ?? "Category"} — JAS geomatics  India`,
     description: c?.blurb ?? "",
   };
 }

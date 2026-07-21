@@ -16,8 +16,8 @@ const cards = [
 ];
 
 const faqs = [
-  { q: "How do I register the warranty for my new Trion device?", a: "Register your serial number in the FJD Trion India portal within 30 days of purchase. Warranty starts from the invoice date and is valid pan-India." },
-  { q: "Which mobile devices are supported by FJD Trion Scan?", a: "Android 10+ and iOS 15+. We recommend flagship devices with LiDAR support for best real-time preview performance." },
+  { q: "How do I register the warranty for my new Trion device?", a: "Register your serial number in the JAS geomatics  India portal within 30 days of purchase. Warranty starts from the invoice date and is valid pan-India." },
+  { q: "Which mobile devices are supported by JAS geomatics  Scan?", a: "Android 10+ and iOS 15+. We recommend flagship devices with LiDAR support for best real-time preview performance." },
   { q: "Can I get on-site training in my city?", a: "Yes — our certified trainers cover 40+ Indian cities. Request an on-site session from the Contact page." },
   { q: "Do you provide GST invoices and export docs?", a: "All sales are billed with GST-compliant invoices. Export documentation is available for SAARC deployments." },
   { q: "How often is firmware updated?", a: "Major firmware releases ship every quarter; critical fixes ship out-of-band. Enable auto-updates in Trion Scan." },
@@ -28,8 +28,8 @@ export default function SupportPage() {
   return (
     <>
       {/* Inline Metadata Handling for Client-Side Next.js Components */}
-      <title>Support — FJD Trion India | Help Centre, Docs, Downloads</title>
-      <meta name="description" content="Guides, firmware downloads, tutorials and pan-India technical support for FJD Trion products." />
+      <title>Support — JAS geomatics  India | Help Centre, Docs, Downloads</title>
+      <meta name="description" content="Guides, firmware downloads, tutorials and pan-India technical support for JAS geomatics  products." />
 
       <PageShell
         eyebrow="We've got your back"

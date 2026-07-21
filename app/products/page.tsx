@@ -36,8 +36,8 @@ const categories = [
   {
     name: "Urban Mapping",
     items: [
-      { title: "FJD Trion Model", sub: "From scans to solutions.", img: p2Vision },
-      { title: "FJD Trion SLAM SDK", sub: "Autonomous 3D inspection everywhere.", img: v4e },
+      { title: "JAS geomatics  Model", sub: "From scans to solutions.", img: p2Vision },
+      { title: "JAS geomatics  SLAM SDK", sub: "Autonomous 3D inspection everywhere.", img: v4e },
     ],
   },
 ];

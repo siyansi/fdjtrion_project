@@ -37,7 +37,7 @@ export function Footers() {
         ))}
       </div>
       <div className="mx-auto max-w-7xl mt-16 pt-6 border-t border-white/10 flex flex-wrap gap-4 items-center justify-between text-xs text-muted-foreground">
-        <div>© {new Date().getFullYear()} FJD Trion India. All rights reserved.</div>
+        <div>© {new Date().getFullYear()} JAS geomatics  India. All rights reserved.</div>
         <div className="flex gap-6">
           <a href="#" className="hover:text-foreground transition">Privacy</a>
           <a href="#" className="hover:text-foreground transition">Terms</a>

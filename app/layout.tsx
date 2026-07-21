@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FJD Trion India",
+  title: "JAS geomatics  India",
   description: "Modern trion website built with Next.js and Tailwind CSS.",
 };
 

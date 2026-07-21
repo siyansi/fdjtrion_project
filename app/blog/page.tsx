@@ -4,18 +4,22 @@ import { useState } from "react";
 import * as motion from "framer-motion/client"; // Next.js 15+ friendly client wrapper
 import { Search } from "lucide-react";
 import  PageShell  from "@/pages/hero"; 
+import  Index, { MowingPlan, Solutions,  TextOverlay,  Unlock,  } from "@/pages/golf";
+import HowItWorks from "@/pages/golf";
+
+import { Heros, Manage, Problem, Why } from "@/pages/golf";
 
 const tabs = ["All", "Product Updates", "Customer Stories", "News & Insights"] as const;
 
 const posts = [
-  { tab: "Customer Stories", date: "Mar 26, 2026", tag: "Surveying", title: "From Paper to Digital: How FJD Trion Revolutionised Building Measurement in Rajasthan", hue: "from-orange-500/30 to-rose-900/40" },
+  { tab: "Customer Stories", date: "Mar 26, 2026", tag: "Surveying", title: "From Paper to Digital: How JAS geomatics  Revolutionised Building Measurement in Rajasthan", hue: "from-orange-500/30 to-rose-900/40" },
   { tab: "Customer Stories", date: "Mar 26, 2026", tag: "Forestry", title: "Seeing the Forest Through the Trees: LiDAR Captures Today for the Future", hue: "from-emerald-500/30 to-green-900/40" },
-  { tab: "Customer Stories", date: "Dec 29, 2025", tag: "Digital Preservation", title: "Capturing Old Delhi's Havelis in 3D with FJD Trion P2", hue: "from-amber-500/30 to-orange-900/40" },
+  { tab: "Customer Stories", date: "Dec 29, 2025", tag: "Digital Preservation", title: "Capturing Old Delhi's Havelis in 3D with JAS geomatics  P2", hue: "from-amber-500/30 to-orange-900/40" },
   { tab: "Customer Stories", date: "Dec 29, 2025", tag: "Surveying", title: "Safe, Fast, Accurate: V10L Receiver in Action on the Konkan Coast", hue: "from-sky-500/30 to-indigo-900/40" },
-  { tab: "Product Updates", date: "Jun 22, 2026", tag: "Firmware", title: "FJD Trion P2 Firmware V1.2.0 — Rover Management & Orientation Display", hue: "from-fuchsia-500/30 to-purple-900/40" },
-  { tab: "Product Updates", date: "May 21, 2026", tag: "Software", title: "FJD Trion Scan V3.6.0 — Improved Field Mapping & RTK Stability", hue: "from-violet-500/30 to-indigo-900/40" },
-  { tab: "News & Insights", date: "Feb 10, 2026", tag: "Event", title: "Meet FJD Trion India at Geo-Spatial World Forum, Hyderabad 2026", hue: "from-cyan-500/30 to-teal-900/40" },
-  { tab: "News & Insights", date: "Jan 05, 2026", tag: "Announcement", title: "FJD Trion India Opens New Support HQ in Bengaluru", hue: "from-brand/30 to-blue-900/40" },
+  { tab: "Product Updates", date: "Jun 22, 2026", tag: "Firmware", title: "JAS geomatics  P2 Firmware V1.2.0 — Rover Management & Orientation Display", hue: "from-fuchsia-500/30 to-purple-900/40" },
+  { tab: "Product Updates", date: "May 21, 2026", tag: "Software", title: "JAS geomatics  Scan V3.6.0 — Improved Field Mapping & RTK Stability", hue: "from-violet-500/30 to-indigo-900/40" },
+  { tab: "News & Insights", date: "Feb 10, 2026", tag: "Event", title: "Meet JAS geomatics  India at Geo-Spatial World Forum, Hyderabad 2026", hue: "from-cyan-500/30 to-teal-900/40" },
+  { tab: "News & Insights", date: "Jan 05, 2026", tag: "Announcement", title: "JAS geomatics  India Opens New Support HQ in Bengaluru", hue: "from-brand/30 to-blue-900/40" },
 ];
 
 export default function BlogsPage() {
@@ -29,8 +33,8 @@ export default function BlogsPage() {
   return (
     <>
       {/* Managing Metadata inside "use client" via the standard Head API tag */}
-      <title>Blogs — FJD Trion India | News, Updates & Stories</title>
-      <meta name="description" content="Product updates, customer stories and news from FJD Trion India — the reality-capture leader for Indian surveyors." />
+      <title>Blogs — JAS geomatics  India | News, Updates & Stories</title>
+      <meta name="description" content="Product updates, customer stories and news from JAS geomatics  India — the reality-capture leader for Indian surveyors." />
 
       <PageShell
         eyebrow="Insights"
@@ -105,6 +109,17 @@ export default function BlogsPage() {
           )}
         </div>
       </PageShell>
+      {/* <Heros />
+      <Problem />
+      <Why />
+        <HowItWorks />
+              <Manage />
+              <TextOverlay />
+              <MowingPlan />
+              <Solutions />
+              <Unlock /> */}
+              <Index />
+
     </>
   );
 }

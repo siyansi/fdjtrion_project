@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const s = findSupport(slug);
 
   return {
-    title: `${s?.name ?? "Support"} — FJD Trion India`,
+    title: `${s?.name ?? "Support"} — JAS geomatics  India`,
     description: s?.tagline ?? "",
   };
 }
@@ -33,7 +33,7 @@ export default async function SupportDetailPage({ params }: Props) {
     <PageShell eyebrow="Support" title={<span className="text-gradient">{it.name}</span>} subtitle={it.tagline}>
       <div className="glass-strong rounded-3xl p-10">
         <p className="text-muted-foreground max-w-2xl">
-          The {it.name} hub gives you everything you need to get the most out of your FJD Trion hardware and software — updated regularly by our India team.
+          The {it.name} hub gives you everything you need to get the most out of your JAS geomatics  hardware and software — updated regularly by our India team.
         </p>
         <div className="mt-8 grid md:grid-cols-3 gap-4">
           {supportItems.filter((s) => s.slug !== it.slug).map((s) => (

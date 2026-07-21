@@ -16,8 +16,8 @@ export default function ContactPage() {
   return (
     <>
       {/* Inline Metadata Handling for "use client" Pages */}
-      <title>Contact — FJD Trion India | Book a Demo</title>
-      <meta name="description" content="Talk to FJD Trion India — book a demo, request a quote, or connect with our team in Delhi, Mumbai and Bengaluru." />
+      <title>Contact — JAS geomatics  India | Book a Demo</title>
+      <meta name="description" content="Talk to JAS geomatics  India — book a demo, request a quote, or connect with our team in Delhi, Mumbai and Bengaluru." />
 
       <PageShell
         eyebrow="Say hello"

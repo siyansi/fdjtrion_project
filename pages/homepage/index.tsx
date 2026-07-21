@@ -4,10 +4,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import p2Vision from "@/assets/product-p2-vision.png";
-import v4e from "@/assets/product-v4e-lidar.png";
-import p2Lidar from "@/assets/product-p2-lidar.png";
-import v10l from "@/assets/product-v10l-gnss.png";
+import p2Vision from "@/assets/P2 LiDAR Thermal.png";
+import v4e from "@/assets/V4E Lidar & V4e Mini.png";
+import p2Lidar from "@/assets/P2 LiDAR.png";
+import v10l from "@/assets/V10l.png";
 
 const slides = [
   {

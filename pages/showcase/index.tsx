@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import pointcloud from "@/assets/pointcloud.jpg";
-import p2Vision from "@/assets/product-p2-vision.png";
+import p2Vision from "@/assets/V10l.png";
 
 // Changed to 'export default function' to satisfy the Next.js router constraint
 export default function Showcase() {
