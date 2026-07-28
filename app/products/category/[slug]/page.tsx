@@ -1,8 +1,12 @@
+"use client";
+
+
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
 import PageShell from "@/pages/hero";
 import { productCategories, type Item } from "@/lib/catalog";
+import { motion } from "framer-motion";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -28,8 +32,7 @@ export default async function CategoryPage({ params }: Props) {
   if (!c) {
     notFound();
   }
-
-  return (
+ return (
     <PageShell eyebrow="Products" title={<span className="text-gradient">{c.name}</span>} subtitle={c.blurb}>
       <div className="space-y-14">
         {c.groups.map((g: { title: string; items: Item[] }) => (
@@ -37,22 +40,20 @@ export default async function CategoryPage({ params }: Props) {
             <div className="text-xs uppercase tracking-[0.24em] text-brand mb-4">{g.title}</div>
             <div className="grid md:grid-cols-3 gap-4">
               {g.items.map((it: Item, i: number) => (
-                /* Replaced motion.div with standard performance-friendly CSS transitions and animations */
-                <div
+                <motion.div
                   key={it.slug}
-                  className="transition-all duration-500 ease-out"
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
                 >
                   <Link
                     href={`/products/${it.slug}`}
-                    className="group block glass-strong rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
+                    className="group block glass-strong rounded-2xl p-6 hover:bg-white/10 transition-all hover:-translate-y-1"
                   >
                     <div className="aspect-video rounded-xl bg-gradient-to-br from-brand/30 to-transparent flex items-center justify-center overflow-hidden mb-4">
                       {it.image ? (
-                        <img 
-                          src={it.image.toString()} 
-                          alt={it.name} 
-                          className="max-h-[80%] object-contain group-hover:scale-110 transition-transform duration-300" 
-                        />
+                        <img src={it.image.toString()} alt={it.name} className="max-h-[80%] object-contain group-hover:scale-110 transition-transform" />
                       ) : (
                         <div className="font-display text-3xl text-gradient opacity-60">{it.name.slice(0, 2)}</div>
                       )}
@@ -60,7 +61,7 @@ export default async function CategoryPage({ params }: Props) {
                     <div className="font-display text-lg">{it.name}</div>
                     <div className="text-sm text-muted-foreground mt-1">{it.tagline}</div>
                   </Link>
-                </div>
+                </motion.div>
               ))}
             </div>
           </section>

@@ -1,8 +1,18 @@
+
+import type { StaticImageData } from "next/image";
 import p2Vision from "@/assets/product-p2-vision.png";
 import p2Lidar from "@/assets/product-p2-lidar.png";
 import v4e from "@/assets/product-v4e-lidar.png";
-import v10l from "@/assets/product-v10l-gnss.png";
-import type { StaticImageData } from "next/image";
+import v10l from "@/assets/V10l.png";
+import p1Lidar from "@/assets/product-p1-lidar.png";
+import sSeries from "@/assets/product-s-series.png";
+import v4ePro from "@/assets/product-v4e-pro.png";
+import baseStation from "@/assets/product-base-station.png";
+import excavatorImg from "@/assets/product-excavator.png";
+import graderImg from "@/assets/product-grader.png";
+import o1Urban from "@/assets/product-o1-urban.png";
+import urbanCamera from "@/assets/product-urban-camera.png";
+import softwareImg from "@/assets/product-software.jpg";
 import indTurf from "@/assets/ind-turf.jpg";
 import indBim from "@/assets/ind-bim.jpg";
 import indCad from "@/assets/ind-cad.jpg";
@@ -28,7 +38,7 @@ export const productCategories: {
   blurb: string;
   groups: { title: string; items: Item[] }[];
 }[] = [
-  {
+   {
     slug: "lidar-scanners",
     name: "LiDAR Scanners",
     blurb: "Handheld and mobile LiDAR systems built for reality capture at any scale.",
@@ -45,21 +55,21 @@ export const productCategories: {
         { slug: "p2-lidar", name: "P2 LiDAR Scanner", tagline: "Go-anywhere scanning.", category: "LiDAR Scanners", image: p2Lidar,
           highlights: ["Rugged IP54", "8-hour battery", "Live preview"],
           specs: [{k:"Range",v:"270 m"},{k:"Accuracy",v:"±2.5 cm"},{k:"Weight",v:"1.35 kg"}] },
-        { slug: "p1-lidar", name: "P1 LiDAR Scanner", tagline: "Reality capture made easy.", category: "LiDAR Scanners", image: p2Lidar,
+        { slug: "p1-lidar", name: "P1 LiDAR Scanner", tagline: "Reality capture made easy.", category: "LiDAR Scanners", image: p1Lidar,
           highlights: ["Compact handheld", "Fast SLAM", "One-click export"],
           specs: [{k:"Range",v:"120 m"},{k:"Accuracy",v:"±3 cm"},{k:"Weight",v:"1.0 kg"}] },
       ]},
       { title: "S Series", items: [
-        { slug: "s2-series", name: "S2 Series LiDAR Scanner", tagline: "Scan the toughest without compromise.", category: "LiDAR Scanners",
+        { slug: "s2-series", name: "S2 Series LiDAR Scanner", tagline: "Scan the toughest without compromise.", category: "LiDAR Scanners", image: sSeries,
           highlights: ["Long-range 450 m", "Dual-return", "Survey-grade IMU"] },
-        { slug: "s1-3d", name: "S1 3D LiDAR Scanner", tagline: "A new way to scan the world.", category: "LiDAR Scanners",
+        { slug: "s1-3d", name: "S1 3D LiDAR Scanner", tagline: "A new way to scan the world.", category: "LiDAR Scanners", image: sSeries,
           highlights: ["Compact form", "Colorised output", "Cloud pipeline"] },
       ]},
       { title: "Software", items: [
-        { slug: "fjd-trion-model", name: "JAS geomatics  Model", tagline: "From scans to solutions.", category: "LiDAR Scanners" },
+        { slug: "fjd-trion-model", name: "FJD Trion Model", tagline: "From scans to solutions.", category: "LiDAR Scanners", image: softwareImg },
       ]},
       { title: "Cloud Platform", items: [
-        { slug: "fjd-trion-model-web", name: "JAS geomatics  Model Web", tagline: "Make scan data work for everyone.", category: "LiDAR Scanners" },
+        { slug: "fjd-trion-model-web", name: "FJD Trion Model Web", tagline: "Make scan data work for everyone.", category: "LiDAR Scanners", image: softwareImg },
       ]},
     ],
   },
@@ -69,11 +79,11 @@ export const productCategories: {
     blurb: "Multi-band RTK receivers, base stations and field software.",
     groups: [
       { title: "V4e Series", items: [
-        { slug: "v4e-pro", name: "V4e Pro", tagline: "Laser precision made easy.", category: "GNSS Systems",
+        { slug: "v4e-pro", name: "V4e Pro", tagline: "Laser precision made easy.", category: "GNSS Systems", image: v4ePro,
           highlights: ["1408-channel", "IMU tilt survey", "Laser plummet"] },
       ]},
       { title: "V1 Series", items: [
-        { slug: "v1t", name: "V1t", tagline: "Work farther with stable GNSS.", category: "GNSS Systems",
+        { slug: "v1t", name: "V1t", tagline: "Work farther with stable GNSS.", category: "GNSS Systems", image: v4ePro,
           highlights: ["Long-range UHF", "Rugged aluminum body"] },
       ]},
       { title: "V10 Series", items: [
@@ -82,12 +92,12 @@ export const productCategories: {
         { slug: "v10l", name: "V10L", tagline: "Measure hard-to-reach points.", category: "GNSS Systems", image: v10l },
       ]},
       { title: "Base Station", items: [
-        { slug: "base-v1", name: "V1", tagline: "Position every point with confidence.", category: "GNSS Systems" },
-        { slug: "n10-cors", name: "N10 Cors System", tagline: "Keep every rover on point.", category: "GNSS Systems" },
+        { slug: "base-v1", name: "V1", tagline: "Position every point with confidence.", category: "GNSS Systems", image: baseStation },
+        { slug: "n10-cors", name: "N10 Cors System", tagline: "Keep every rover on point.", category: "GNSS Systems", image: baseStation },
       ]},
       { title: "Software", items: [
-        { slug: "trion-survey", name: "Trion Survey", tagline: "Field work made easy.", category: "GNSS Systems" },
-        { slug: "gnss-studio", name: "GNSS Studio", tagline: "From observation to output, precisely.", category: "GNSS Systems" },
+        { slug: "trion-survey", name: "Trion Survey", tagline: "Field work made easy.", category: "GNSS Systems", image: softwareImg },
+        { slug: "gnss-studio", name: "GNSS Studio", tagline: "From observation to output, precisely.", category: "GNSS Systems", image: softwareImg },
       ]},
     ],
   },
@@ -97,25 +107,25 @@ export const productCategories: {
     blurb: "3D machine guidance and layout automation for the jobsite.",
     groups: [
       { title: "Excavator", items: [
-        { slug: "eg10", name: "EG10 Excavator Guidance System", tagline: "Get more done, with less setup.", category: "Digital Construction",
+        { slug: "eg10", name: "EG10 Excavator Guidance System", tagline: "Get more done, with less setup.", category: "Digital Construction", image: excavatorImg,
           highlights: ["Rapid install", "Dual-antenna GNSS", "Live cut/fill"] },
-        { slug: "ec100-g31", name: "EC100 (G31 PRO) Excavator Guidance System", tagline: "Less rework, more control.", category: "Digital Construction",
+        { slug: "ec100-g31", name: "EC100 (G31 PRO) Excavator Guidance System", tagline: "Less rework, more control.", category: "Digital Construction", image: excavatorImg,
           highlights: ["3D design overlay", "Tilt-bucket ready", "Rugged display"] },
       ]},
       { title: "Motor Grader", items: [
-        { slug: "gc100-h36", name: "GC100 (H36 PRO) 3D Motor Grader Control System", tagline: "Achieve accurate grading in one go.", category: "Digital Construction",
+        { slug: "gc100-h36", name: "GC100 (H36 PRO) 3D Motor Grader Control System", tagline: "Achieve accurate grading in one go.", category: "Digital Construction", image: graderImg,
           highlights: ["Auto blade control", "cm-grade accuracy", "One-pass finishing"] },
       ]},
       { title: "Dozer", items: [
-        { slug: "dc100-h39", name: "DC100 (H39 PRO) 3D Dozer Control System", tagline: "Smarter cuts, smoother execution.", category: "Digital Construction",
+        { slug: "dc100-h39", name: "DC100 (H39 PRO) 3D Dozer Control System", tagline: "Smarter cuts, smoother execution.", category: "Digital Construction", image: graderImg,
           highlights: ["Automatic blade", "Slope + elevation", "Design-model aware"] },
       ]},
       { title: "Snow Plow", items: [
-        { slug: "sg10", name: "SG10 Snow Removal Guidance System", tagline: "Snow removal, clearly guided.", category: "Digital Construction",
+        { slug: "sg10", name: "SG10 Snow Removal Guidance System", tagline: "Snow removal, clearly guided.", category: "Digital Construction", image: graderImg,
           highlights: ["Route guidance", "Blade feedback", "All-weather display"] },
       ]},
       { title: "Software", items: [
-        { slug: "fjd-trion-terramind", name: "JAS geomatics  TerraMind", tagline: "A digital bridge to your jobsite.", category: "Digital Construction" },
+        { slug: "fjd-trion-terramind", name: "FJD Trion TerraMind", tagline: "A digital bridge to your jobsite.", category: "Digital Construction", image: softwareImg },
       ]},
     ],
   },
@@ -125,17 +135,16 @@ export const productCategories: {
     blurb: "Mobile mapping platforms for city-scale digital twins.",
     groups: [
       { title: "Urban 3D Modeling", items: [
-        { slug: "o1-urban-3d", name: "O1 Urban 3D Modeling", tagline: "A new way to urban-map the world.", category: "Urban Mapping",
+        { slug: "o1-urban-3d", name: "O1 Urban 3D Modeling", tagline: "A new way to urban-map the world.", category: "Urban Mapping", image: o1Urban,
           highlights: ["Aerial + ground fusion", "Automated meshing", "City-scale output"] },
       ]},
       { title: "Urban Camera", items: [
-        { slug: "am150a", name: "AM150A Medium Format Urban Camera", tagline: "Capture every detail in flight.", category: "Urban Mapping",
+        { slug: "am150a", name: "AM150A Medium Format Urban Camera", tagline: "Capture every detail in flight.", category: "Urban Mapping", image: urbanCamera,
           highlights: ["Medium-format sensor", "Oblique-ready", "Metric-grade optics"] },
       ]},
     ],
   },
 ];
-
 
 export type WorkflowStep = { title: string; description: string };
 

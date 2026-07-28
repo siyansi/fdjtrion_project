@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import p2Vision from "@/assets/P2 LiDAR Thermal.png";
-import v4e from "@/assets/V4E Lidar & V4e Mini.png";
+import v4e from "@/assets/V4E LiDAR.png";
 import p2Lidar from "@/assets/P2 LiDAR.png";
 import s2Lidar from "@/assets/S2 Max LiDAR with INsta X5 Camera.png";
-import v10l from "@/assets/V10l with controller 1.png";
-import v4Lidar from "@/assets/V4E LiDAR.png";
+import v10l from "@/assets/V10l.png";
+import v4Lidar from "@/assets/V10l with controller 1.png";
 
 
 const products = [

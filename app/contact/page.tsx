@@ -73,7 +73,7 @@ export default function ContactPage() {
                 <Mail className="h-5 w-5" />
                 <span className="text-xs uppercase tracking-widest">Email</span>
               </div>
-              <div className="mt-3 font-display text-2xl">hello@fjdtrion.in</div>
+              <div className="mt-3 font-display text-2xl">hello@jasgeomatrcs.in</div>
             </div>
             <div className="glass rounded-3xl p-6">
               <div className="flex items-center gap-3 text-brand">
