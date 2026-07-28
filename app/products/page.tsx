@@ -3,10 +3,13 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import PageShell from "@/pages/hero";
-import p2Vision from "@/assets/product-p2-vision.png";
-import v4e from "@/assets/product-v4e-lidar.png";
-import p2Lidar from "@/assets/product-p2-lidar.png";
-import v10l from "@/assets/product-v10l-gnss.png";
+import p2Vision from "@/assets/P2 LiDAR.png";
+import v4e from "@/assets/V4E LiDAR.png";
+import p2Lidar from "@/assets/P2 LiDAR Thermal.png";
+import v10l from "@/assets/V10l.png";
+import s2 from "@/assets/S2 Max LiDAR with INsta X5 Camera.png";
+import dc from "@/assets/product-grader.png";
+import excavatorImg from "@/assets/product-excavator.png";
 
 const categories = [
   {
@@ -15,22 +18,22 @@ const categories = [
       { title: "V4e LiDAR", sub: "The easy way into 3D scanning.", img: v4e },
       { title: "P2 Vision+", sub: "Act faster with 3D thermal insight.", img: p2Vision },
       { title: "P2 LiDAR Scanner", sub: "Go-anywhere scanning.", img: p2Lidar },
-      { title: "S2 Series LiDAR", sub: "Scan the toughest without compromise.", img: p2Lidar },
+      { title: "S2 Series LiDAR", sub: "Scan the toughest without compromise.", img: s2 },
     ],
   },
   {
     name: "GNSS Systems",
     items: [
       { title: "V10L GNSS", sub: "Pinpoint accuracy at laser speed.", img: v10l },
-      { title: "V4e Pro", sub: "IMU-tilt survey, all day.", img: v10l },
+      { title: "V4e Pro", sub: "IMU-tilt survey, all day.", img: v4e },
     ],
   },
   {
     name: "Digital Construction",
     items: [
-      { title: "EC100 Excavator Guidance", sub: "Less rework. More control.", img: p2Lidar },
+      { title: "EC100 Excavator Guidance", sub: "Less rework. More control.", img: excavatorImg },
       { title: "GC100 Motor Grader", sub: "Accurate grading in one go.", img: p2Lidar },
-      { title: "DC100 Dozer Control", sub: "Smarter cuts, smoother execution.", img: p2Lidar },
+      { title: "DC100 Dozer Control", sub: "Smarter cuts, smoother execution.", img: dc },
     ],
   },
   {
