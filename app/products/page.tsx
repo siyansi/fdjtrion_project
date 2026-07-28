@@ -14,7 +14,7 @@ import excavatorImg from "@/assets/product-excavator.png";
 const categories = [
   {
     name: "LiDAR Scanners",
-    items: [
+    items: [     
       { title: "V4e LiDAR", sub: "The easy way into 3D scanning.", img: v4e },
       { title: "P2 Vision+", sub: "Act faster with 3D thermal insight.", img: p2Vision },
       { title: "P2 LiDAR Scanner", sub: "Go-anywhere scanning.", img: p2Lidar },
