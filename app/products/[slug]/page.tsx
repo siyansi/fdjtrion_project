@@ -304,33 +304,39 @@ function SpecsTable({ groups, inTheBox }: { groups: NonNullable<ReturnType<typeo
 function RelatedProducts({ related, category }: { related: ReturnType<typeof findProduct>[] extends (infer U)[] ? U[] : never; category: string }) {
   if (!related.length) return null;
   return (
-    <section className="relative py-24 px-6">
-      <div className="mx-auto max-w-7xl">
-        <div className="flex items-baseline justify-between mb-10">
-          <h2 className="font-display text-3xl md:text-4xl">More in <span className="text-gradient">{category}</span></h2>
-          <Link href="/products" className="text-sm text-brand hover:underline">All products →</Link>
-        </div>
-        <div className="grid md:grid-cols-3 gap-5">
-          {related.map((r) => (
-            <Link
-              key={r!.slug}
-              href={`/products/${r!.slug}`}
-              className="group glass rounded-3xl p-6 hover:bg-white/10 hover:-translate-y-2 transition-all duration-500"
-            >
-              {r!.image && (
-                <div className="relative h-40 mb-4 flex items-center justify-center overflow-hidden">
-                  <div className="absolute h-32 w-32 rounded-full bg-brand/10 blur-2xl group-hover:bg-brand/25 transition" />
-                  <img src={r!.image.toString()} alt={r!.name} loading="lazy" className="relative h-full w-auto object-contain transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3" />
-                </div>
-              )}
-              <div className="text-xs text-brand">{r!.category}</div>
-              <div className="mt-2 font-display text-lg">{r!.name}</div>
-              <div className="text-sm text-muted-foreground mt-1 line-clamp-2">{r!.tagline}</div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
+   <section className="relative py-24 px-6">
+  <div className="mx-auto max-w-7xl">
+    <div className="flex items-baseline justify-between mb-10">
+      <h2 className="font-display text-3xl md:text-4xl">More in <span className="text-gradient">{category}</span></h2>
+      <Link href="/products" className="text-sm text-brand hover:underline">All products →</Link>
+    </div>
+    <div className="grid md:grid-cols-3 gap-5">
+      {related.map((r) => (
+        <Link
+          key={r!.slug}
+          href={`/products/${r!.slug}`}
+          className="group glass rounded-3xl p-6 hover:bg-white/10 hover:-translate-y-2 transition-all duration-500"
+        >
+          {r!.image && (
+            <div className="relative h-40 w-full mb-4 flex items-center justify-center overflow-hidden">
+              <div className="absolute h-32 w-32 rounded-full bg-brand/10 blur-2xl group-hover:bg-brand/25 transition" />
+              <Image
+                src={r!.image}
+                alt={r!.name}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-contain transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3"
+              />
+            </div>
+          )}
+          <div className="text-xs text-brand">{r!.category}</div>
+          <div className="mt-2 font-display text-lg">{r!.name}</div>
+          <div className="text-sm text-muted-foreground mt-1 line-clamp-2">{r!.tagline}</div>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
   );
 }
 
