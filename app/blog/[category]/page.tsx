@@ -30,7 +30,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       subtitle={category.blurb}
     >
       <div className="flex flex-wrap gap-2 border-b border-white/10 pb-5">
-        <Link href="/blogs" className="rounded-full px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition">
+        <Link href="/blog" className="rounded-full px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition">
           All
         </Link>
         {blogCategories.map((c) => (
@@ -60,18 +60,19 @@ export default function CategoryPage({ params }: CategoryPageProps) {
               href={`/blog/${category.slug}/${p.slug}`}
               className="group relative block overflow-hidden rounded-3xl glass h-full"
             >
-              <div className="relative aspect-[16/9] overflow-hidden bg-background/60">
-                <Image
-                  src={p.image.toString()}
-                  alt={p.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[900ms] group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                <span className="absolute top-4 right-4 rounded-full bg-brand px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-background">
-                  {category.name}
-                </span>
-              </div>
+            <div className="relative aspect-[16/9] overflow-hidden bg-background/60">
+  <Image
+    src={p.image}
+    alt={p.title}
+    fill
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    className="object-cover transition-transform duration-[900ms] group-hover:scale-110"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+  <span className="absolute top-4 right-4 rounded-full bg-brand px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-background">
+    {category.name}
+  </span>
+</div>
               <div className="p-6">
                 <div className="flex items-center gap-3 text-xs">
                   <span className="text-muted-foreground">{p.date}</span>
